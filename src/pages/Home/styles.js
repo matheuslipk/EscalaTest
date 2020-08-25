@@ -14,10 +14,10 @@ export const Input = styled.div`
   width: 300px;
   margin-bottom: 20px;
   border-color: #aaa;
-  border-radius: 3px;
+  border-radius: 5px;
 
-  svg{
-
+  svg:hover{
+    cursor: pointer;
   }
 
   input{
@@ -58,16 +58,18 @@ export const Item = styled.li`
   div{ 
     display: flex;
     flex-direction: row;
-    padding-left: 10px;
   }
 
 `;
 
 export const DivDesc = styled.div`
-  border-left: 0px solid #838080;
-  margin-right: 8px;
+  margin-right: 10px;
+  svg{
+
+  }
 `;
 
 export const ItemDesc = styled.label`
+  margin-left: 5px;
   color: #838080;
 `;

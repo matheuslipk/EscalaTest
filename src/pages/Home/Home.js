@@ -15,7 +15,8 @@ export default function Home() {
   const [textFilter, setTextFilter] = React.useState('');
 
   const filter = () => {
-    const itensFiltered = itens.filter((i) => i.nmUnimed.includes(textFilter.toUpperCase()));
+    const textTemp = textFilter.toUpperCase();
+    const itensFiltered = itens.filter((i) => i.nmUnimed.includes(textTemp));
     setItens(itensFiltered);
   };
 
@@ -31,7 +32,7 @@ export default function Home() {
   return (
     <Container>
       <Input>
-        <AiOutlineSearch onClick={filter} />
+        <AiOutlineSearch onClick={filter} size={25} />
         <input placeholder="Pesquisar" value={textFilter} onChange={(t) => setTextFilter(t.target.value)} />
       </Input>
 
@@ -44,17 +45,17 @@ export default function Home() {
                 <TitleItem>{i.nmUnimed}</TitleItem>
                 <div>
                   <DivDesc>
-                    <AiFillDribbbleCircle color="#838080" />
+                    <AiFillDribbbleCircle color="#838080" size={22} />
                     <ItemDesc>{i.site ? i.site : 'Nenhum site cadastrado'}</ItemDesc>
                   </DivDesc>
                   |
                   <DivDesc>
-                    <MdCall color="#838080" />
+                    <MdCall color="#838080" size={22} />
                     <ItemDesc>{i.telefone}</ItemDesc>
                   </DivDesc>
                   |
                   <DivDesc>
-                    <GoLocation color="#838080" />
+                    <GoLocation color="#838080" size={22} />
                     <ItemDesc>{i.endereco}</ItemDesc>
                   </DivDesc>
                 </div>
